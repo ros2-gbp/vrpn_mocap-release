@@ -1,8 +1,0 @@
-ros-rolling-vrpn-mocap (1.0.0-2jammy) jammy; urgency=high
-
-  * Initial public release of vrpn_mocap
-  * Contributors: Alvin Sun
-
- -- Alvin Sun <alvinsunyixiao@gmail.com>  Mon, 04 Jul 2022 07:00:00 -0000
-
-
