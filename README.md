@@ -1,5 +1,9 @@
 # vrpn\_mocap
 
+![foxy](https://github.com/alvinsunyixiao/vrpn_mocap/actions/workflows/foxy.yml/badge.svg)
+![humble](https://github.com/alvinsunyixiao/vrpn_mocap/actions/workflows/humble.yml/badge.svg)
+![rolling](https://github.com/alvinsunyixiao/vrpn_mocap/actions/workflows/rolling.yml/badge.svg)
+
 ROS2 [VRPN](https://github.com/vrpn/vrpn) client built pirmarily to interface
 with motion capture devices such as VICON and OptiTrack. A detailed list of
 supported hardware can be found on
@@ -29,9 +33,9 @@ ros2 launch client.launch.yaml server:=192.168.0.4 port:=3883
 ```
 Then with `ros2 topic list`, you should be able to see the following topics
 ```bash
-/vrpn_mocap/client_node/<tracker_name>/pose
-/vrpn_mocap/client_node/<tracker_name>/twist # optional when mocap reports velocity data
-/vrpn_mocap/client_node/<tracker_name>/accel # optional when mocap reports acceleration data
+/vrpn_mocap/<tracker_name>/pose
+/vrpn_mocap/<tracker_name>/twist # optional when mocap reports velocity data
+/vrpn_mocap/<tracker_name>/accel # optional when mocap reports acceleration data
 ```
 where `<tracker_name>` is usually the name of your tracked objects.
 
