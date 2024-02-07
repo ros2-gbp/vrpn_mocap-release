@@ -45,6 +45,9 @@ Client::Client(const std::string & name)
 
   const double update_freq = this->declare_parameter("update_freq", 100.);
   mainloop_timer_ = this->create_wall_timer(1s / update_freq, std::bind(&Client::MainLoop, this));
+
+  this->declare_parameter("sensor_data_qos", true);
+  this->declare_parameter("use_vrpn_timestamps", false);
 }
 
 std::string Client::ParseHost()
