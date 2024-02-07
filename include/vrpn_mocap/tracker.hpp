@@ -31,9 +31,11 @@
 #include "vrpn_Connection.h"
 #include "vrpn_Tracker.h"
 
+#include "builtin_interfaces/msg/time.hpp"
 #include "geometry_msgs/msg/accel_stamped.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "geometry_msgs/msg/twist_stamped.hpp"
+#include "rclcpp/qos.hpp"
 #include "rclcpp/rclcpp.hpp"
 
 namespace vrpn_mocap
@@ -98,6 +100,8 @@ public:
   const std::string name_;
   const bool multi_sensor_;
   const std::string frame_id_;
+  const bool sensor_data_qos_;
+  const bool use_vrpn_timestamps_;
   const std::shared_ptr<vrpn_Connection> connection_;
 
   vrpn_Tracker_Remote vrpn_tracker_;
@@ -122,12 +126,22 @@ public:
     const std::string sensor_channel =
       multi_sensor_ ? channel + std::to_string(sensor_idx) : channel;
     if (!pubs->at(sensor_idx)) {
-      pubs->at(sensor_idx) = this->create_publisher<MsgT>(sensor_channel, 10);
+      if (sensor_data_qos_) {
+        pubs->at(sensor_idx) = this->create_publisher<MsgT>(
+          sensor_channel,
+          rclcpp::SensorDataQoS());
+      } else {
+        pubs->at(sensor_idx) = this->create_publisher<MsgT>(
+          sensor_channel,
+          rclcpp::SystemDefaultsQoS());
+      }
       RCLCPP_INFO_STREAM(this->get_logger(), "Creating sensor " << sensor_idx);
     }
 
     return pubs->at(sensor_idx);
   }
+
+  builtin_interfaces::msg::Time GetTimestamp(struct timeval vrpn_timestamp);
 
   static void VRPN_CALLBACK HandlePose(void * tracker, const vrpn_TRACKERCB tracker_pose);
   static void VRPN_CALLBACK HandleTwist(void * tracker, const vrpn_TRACKERVELCB tracker_vel);
