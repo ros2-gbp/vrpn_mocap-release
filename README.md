@@ -1,5 +1,10 @@
 # vrpn\_mocap
 
+![foxy](https://github.com/alvinsunyixiao/vrpn_mocap/actions/workflows/foxy.yml/badge.svg)
+![humble](https://github.com/alvinsunyixiao/vrpn_mocap/actions/workflows/humble.yml/badge.svg)
+![iron](https://github.com/alvinsunyixiao/vrpn_mocap/actions/workflows/iron.yml/badge.svg)
+![rolling](https://github.com/alvinsunyixiao/vrpn_mocap/actions/workflows/rolling.yml/badge.svg)
+
 ROS2 [VRPN](https://github.com/vrpn/vrpn) client built pirmarily to interface
 with motion capture devices such as VICON and OptiTrack. A detailed list of
 supported hardware can be found on
@@ -8,7 +13,7 @@ supported hardware can be found on
 ## Installation
 
 #### Install From Binary Release
-- [ ] TODO
+`sudo apt install ros-<rosdistro>-vrpn-mocap`
 
 #### Build From Source
 1. Clone this repo into your ROS2 workspace
@@ -21,17 +26,17 @@ supported hardware can be found on
 #### Launch Default Configuration from Command Line
 Run the following command,
 ```bash
-ros2 launch client.launch.yaml server:=<server ip> port:=<port>
+ros2 launch vrpn_mocap client.launch.yaml server:=<server ip> port:=<port>
 ```
 replacing `<server ip>` and `<port>` with your VRPN server ip and port, e.g.
 ```bash
-ros2 launch client.launch.yaml server:=192.168.0.4 port:=3883
+ros2 launch vrpn_mocap client.launch.yaml server:=192.168.0.4 port:=3883
 ```
 Then with `ros2 topic list`, you should be able to see the following topics
 ```bash
-/vrpn_mocap/client_node/<tracker_name>/pose
-/vrpn_mocap/client_node/<tracker_name>/twist # optional when mocap reports velocity data
-/vrpn_mocap/client_node/<tracker_name>/accel # optional when mocap reports acceleration data
+/vrpn_mocap/<tracker_name>/pose
+/vrpn_mocap/<tracker_name>/twist # optional when mocap reports velocity data
+/vrpn_mocap/<tracker_name>/accel # optional when mocap reports acceleration data
 ```
 where `<tracker_name>` is usually the name of your tracked objects.
 
@@ -46,8 +51,11 @@ file with custom configurations.
 - `frame_id (string)` -- frame name of the fixed world frame (default: `"world"`)
 - `update_freq (double)` -- frequency of the motion capture data publisher (default: `100.`)
 - `refresh_freq (double)` -- frequency of dynamic adding new tracked objects (default: `1.`)
+- `sensor_data_qos` -- use best effort QoS for VRPN data stream, set to false to use
+  system default QoS which is reliable (default: `true`)
 - `multi_sensor (bool)` -- set to true if there are more than one sensor (frame) reporting on
   the same object (default: `false`)
+- `use_vrpn_timestamps (bool)` -- use timestamps coming from VRPN. This ensures that the interval between frames timestamps is not modified (default: `false`)
 
 ### Acknowledgement
 Some ideas are borrowed from the well known
