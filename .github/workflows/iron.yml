@@ -1,4 +1,4 @@
-name: foxy build
+name: iron build
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  foxy_build:
-    runs-on: ubuntu-20.04
+  iron_build:
+    runs-on: ubuntu-22.04
     steps:
       - name: cancle preivious run
         uses: styfle/cancel-workflow-action@0.10.0
@@ -20,14 +20,13 @@ jobs:
       - name: Setup cmake
         uses: jwlawson/actions-setup-cmake@v1.12
         with:
-          cmake-version: '3.16.x'
+          cmake-version: '3.22.x'
       - name: setup ROS2
-        uses: ros-tooling/setup-ros@v0.6
+        uses: ros-tooling/setup-ros@0.7.1
         with:
-          use-ros2-testing: true  # remove this once vrpn package goes into foxy index
-          required-ros-distributions: foxy
+          required-ros-distributions: iron
       - name: ROS2 build and test
-        uses: ros-tooling/action-ros-ci@v0.3
+        uses: ros-tooling/action-ros-ci@0.3.5
         with:
           package-name: vrpn_mocap
-          target-ros2-distro: foxy
+          target-ros2-distro: iron
