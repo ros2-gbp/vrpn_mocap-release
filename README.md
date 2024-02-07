@@ -1,3 +1,26 @@
+## vrpn_mocap (rolling) - 1.1.0-1
+
+The packages in the `vrpn_mocap` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling vrpn_mocap` on `Wed, 07 Feb 2024 23:41:35 -0000`
+
+The `vrpn_mocap` package was released.
+
+Version of package(s) in repository `vrpn_mocap`:
+
+- upstream repository: https://github.com/alvinsunyixiao/vrpn_mocap.git
+- release repository: https://github.com/ros2-gbp/vrpn_mocap-release.git
+- rosdistro version: `1.0.4-1`
+- old version: `1.0.4-1`
+- new version: `1.1.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## vrpn_mocap (humble) - 1.1.0-1
 
 The packages in the `vrpn_mocap` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble vrpn_mocap` on `Wed, 07 Feb 2024 23:39:42 -0000`
