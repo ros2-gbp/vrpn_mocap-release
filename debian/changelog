@@ -1,0 +1,57 @@
+ros-rolling-vrpn-mocap (1.1.0-3noble) noble; urgency=high
+
+  * fix readme (#9 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/9>)
+  * Add option to use VRPN timestamps rather than generating them again (#7 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/7>)
+  * fix duplicate topic name for twist (#6 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/6>)
+    Co-authored-by: stuebema <mailto:stueben@isse.de>
+    Co-authored-by: Alvin Sun <mailto:alvinsunyixiao@gmail.com>
+  * rename different CIs to different job names (#8 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/8>)
+  * default to use sensor data qos (#4 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/4>)
+  * Contributors: Alvin Sun, mstueben, njacquemin1993
+
+ -- Alvin Sun <alvinsunyixiao@gmail.com>  Wed, 07 Feb 2024 08:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.4-3noble) noble; urgency=high
+
+  * fix readme
+  * use node clock (#3 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/3>)
+  * cancel ci run on previous push (#2 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/2>)
+  * add foxy ci (#1 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/1>)
+    * add foxy ci
+    * fix package name
+    * revert cmake
+    * downgrade cmake in CI
+    * add rolling and humble CI and badages
+  * Contributors: Alvin Sun
+
+ -- Alvin Sun <alvinsunyixiao@gmail.com>  Tue, 25 Apr 2023 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.3-3noble) noble; urgency=high
+
+  * fix header typo
+  * Contributors: Alvin Sun
+
+ -- Alvin Sun <alvinsunyixiao@gmail.com>  Tue, 30 Aug 2022 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.2-3noble) noble; urgency=high
+
+  * fix include order to work with both rolling and foxy
+  * Contributors: Alvin Sun
+
+ -- Alvin Sun <alvinsunyixiao@gmail.com>  Tue, 30 Aug 2022 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.1-3noble) noble; urgency=high
+
+  * Fix lint errors
+  * Contributors: Alvin Sun
+
+ -- Alvin Sun <alvinsunyixiao@gmail.com>  Tue, 30 Aug 2022 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.0-3noble) noble; urgency=high
+
+  * Initial public release of vrpn_mocap
+  * Contributors: Alvin Sun
+
+ -- Alvin Sun <alvinsunyixiao@gmail.com>  Mon, 04 Jul 2022 07:00:00 -0000
+
+
