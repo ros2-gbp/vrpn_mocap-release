@@ -1,0 +1,13 @@
+Source: ros-jazzy-vrpn-mocap
+Section: misc
+Priority: optional
+Maintainer: Alvin Sun <alvinsunyixiao@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ament-cmake, ament-cmake-copyright <!nocheck>, ament-cmake-cppcheck <!nocheck>, ament-cmake-cpplint <!nocheck>, ament-cmake-flake8 <!nocheck>, ament-cmake-lint-cmake <!nocheck>, ament-cmake-pep257 <!nocheck>, ament-cmake-uncrustify <!nocheck>, ament-cmake-xmllint <!nocheck>, ament-lint <!nocheck>, libeigen3-dev, libgeometry-msgs-dev, libstd-msgs-dev, libtf2-dev, python3-geometry-msgs, python3-std-msgs, python3-tf2, ros-geometry-msgs, ros-jazzy-eigen3-cmake-module, ros-jazzy-rclcpp, ros-jazzy-vrpn, ros-std-msgs, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-vrpn-mocap
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgeometry-msgs-dev, libstd-msgs-dev, libtf2-dev, python3-geometry-msgs, python3-std-msgs, python3-tf2, ros-geometry-msgs, ros-jazzy-rclcpp, ros-jazzy-vrpn, ros-std-msgs, ros-jazzy-ros-workspace
+Description: ROS2 VRPN client built primarily to interface with motion capture devices such as VICON and OptiTrack.
+ A detailed list of supported hardware can be found here.
