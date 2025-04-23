@@ -1,1 +1,1 @@
-{"base": "42ff5e0", "parent": "debian/rolling/vrpn_mocap", "previous": "7179704", "trim": "", "trimbase": ""}
+{"base": "a9a0a0b192b2", "parent": "debian/kilted/vrpn_mocap", "previous": "e299308f988e", "trim": "", "trimbase": ""}
