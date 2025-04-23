@@ -1,0 +1,13 @@
+Source: ros-kilted-vrpn-mocap
+Section: misc
+Priority: optional
+Maintainer: Alvin Sun <alvinsunyixiao@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-kilted-ament-cmake, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-ament-lint-common <!nocheck>, ros-kilted-eigen3-cmake-module, ros-kilted-geometry-msgs, ros-kilted-rclcpp, ros-kilted-std-msgs, ros-kilted-tf2, ros-kilted-vrpn, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-vrpn-mocap
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-geometry-msgs, ros-kilted-rclcpp, ros-kilted-std-msgs, ros-kilted-tf2, ros-kilted-vrpn, ros-kilted-ros-workspace
+Description: ROS2 VRPN client built primarily to interface with motion capture devices such as VICON and OptiTrack.
+ A detailed list of supported hardware can be found here.
