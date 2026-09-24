@@ -1,3 +1,26 @@
+## vrpn_mocap (rolling) - 1.2.0-1
+
+The packages in the `vrpn_mocap` repository were released into the `rolling` distro by running `/home/alvinsun/micromamba/envs/lyrical/bin/bloom-release --rosdistro rolling --track rolling vrpn_mocap --non-interactive --no-web --override-release-repository-push-url git@github.com:ros2-gbp/vrpn_mocap-release.git` on `Thu, 24 Sep 2026 23:02:42 -0000`
+
+The `vrpn_mocap` package was released.
+
+Version of package(s) in repository `vrpn_mocap`:
+
+- upstream repository: https://github.com/alvinsunyixiao/vrpn_mocap.git
+- release repository: https://github.com/ros2-gbp/vrpn_mocap-release.git
+- rosdistro version: `1.1.0-4`
+- old version: `1.1.0-4`
+- new version: `1.2.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## vrpn_mocap (lyrical) - 1.2.0-1
 
 The packages in the `vrpn_mocap` repository were released into the `lyrical` distro by running `/home/alvinsun/micromamba/envs/lyrical/bin/bloom-release --rosdistro lyrical --track lyrical vrpn_mocap --non-interactive --no-web --override-release-repository-push-url git@github.com:ros2-gbp/vrpn_mocap-release.git` on `Thu, 24 Sep 2026 23:02:03 -0000`
