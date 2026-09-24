@@ -1,0 +1,80 @@
+ros-rolling-vrpn-mocap (1.2.0-1trixie) trixie; urgency=high
+
+  * [CI] Replace cancel action with concurrency (#24 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/24>)
+  * [CI] Use container instead of setup-ros action (#26 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/26>)
+  * [CI] Add new CI for lyrical, kilted (#23 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/23>)
+    * [CI] Add new CI for lyrical, kilted
+    * Update readme + remove ament_target_dependencies usage
+  * [CI] Drop foxy build entirely due to ubuntu 20.04 image unavailable (#22 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/22>)
+  * [CI] Use floating version for ros CI tools (#21 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/21>)
+  * [Eigen] Support eigen 5 (#16 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/16>)
+  * [CI] Mark iron as EOL distro (#19 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/19>)
+  * [CI] Drop running CI on EOL and failing distros (#20 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/20>)
+  * [CI] Fix CI env setup for jazzy build (#18 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/18>)
+    * [CI] Fix CI env setup for jazzy build
+    * also fix iron setup
+  * add build status for jazzy and deprecate foxy (#13 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/13>)
+  * Fix node name in config.yaml (#11 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/11>)
+    Co-authored-by: Alvin Sun <mailto:alvinsunyixiao@gmail.com>
+  * update CI for rolling and jazzy (#12 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/12>)
+  * Contributors: Alvin Sun, nhallez
+
+ -- "Alvin Sun" <alvinsunyixiao@gmail.com>  Thu, 24 Sep 2026 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.1.0-1trixie) trixie; urgency=high
+
+  * fix readme (#9 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/9>)
+  * Add option to use VRPN timestamps rather than generating them again (#7 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/7>)
+  * fix duplicate topic name for twist (#6 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/6>)
+    Co-authored-by: stuebema <mailto:stueben@isse.de>
+    Co-authored-by: Alvin Sun <mailto:alvinsunyixiao@gmail.com>
+  * rename different CIs to different job names (#8 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/8>)
+  * default to use sensor data qos (#4 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/4>)
+  * Contributors: Alvin Sun, mstueben, njacquemin1993
+
+ -- "Alvin Sun" <alvinsunyixiao@gmail.com>  Wed, 07 Feb 2024 08:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.4-1trixie) trixie; urgency=high
+
+  * fix readme
+  * use node clock (#3 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/3>)
+  * cancel ci run on previous push (#2 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/2>)
+  * add foxy ci (#1 <https://github.com/alvinsunyixiao/vrpn_mocap/issues/1>)
+    * add foxy ci
+    * fix package name
+    * revert cmake
+    * downgrade cmake in CI
+    * add rolling and humble CI and badages
+  * Contributors: Alvin Sun
+
+ -- "Alvin Sun" <alvinsunyixiao@gmail.com>  Tue, 25 Apr 2023 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.3-1trixie) trixie; urgency=high
+
+  * fix header typo
+  * Contributors: Alvin Sun
+
+ -- "Alvin Sun" <alvinsunyixiao@gmail.com>  Tue, 30 Aug 2022 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.2-1trixie) trixie; urgency=high
+
+  * fix include order to work with both rolling and foxy
+  * Contributors: Alvin Sun
+
+ -- "Alvin Sun" <alvinsunyixiao@gmail.com>  Tue, 30 Aug 2022 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.1-1trixie) trixie; urgency=high
+
+  * Fix lint errors
+  * Contributors: Alvin Sun
+
+ -- "Alvin Sun" <alvinsunyixiao@gmail.com>  Tue, 30 Aug 2022 07:00:00 -0000
+
+ros-rolling-vrpn-mocap (1.0.0-1trixie) trixie; urgency=high
+
+  * Initial public release of vrpn_mocap
+  * Contributors: Alvin Sun
+
+ -- "Alvin Sun" <alvinsunyixiao@gmail.com>  Mon, 04 Jul 2022 07:00:00 -0000
+
+
