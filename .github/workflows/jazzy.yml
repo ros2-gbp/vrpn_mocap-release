@@ -1,7 +1,9 @@
-name: iron build (EOL)
+name: jazzy build
 
 on:
   push:
+    branches: [ "main" ]
+  pull_request:
     branches: [ "main" ]
 
   workflow_dispatch:
@@ -11,13 +13,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  iron_build:
+  jazzy_build:
     runs-on: ubuntu-latest
     container:
-      image: rostooling/setup-ros-docker:ubuntu-jammy-ros-iron-ros-base-latest
+      image: rostooling/setup-ros-docker:ubuntu-noble-ros-jazzy-ros-base-latest
     steps:
       - name: ROS2 build and test
-        uses: ros-tooling/action-ros-ci@v0.3
+        uses: ros-tooling/action-ros-ci@v0.4
         with:
           package-name: vrpn_mocap
-          target-ros2-distro: iron
+          target-ros2-distro: jazzy
